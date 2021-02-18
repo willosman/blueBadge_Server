@@ -1,7 +1,7 @@
 {
   "name": "blue-badge-project",
   "version": "1.0.0",
-  "description": "Journal",
+  "description": "blue-badge-project!",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

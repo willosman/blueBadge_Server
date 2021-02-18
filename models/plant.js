@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         image_url: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(2000),
             allowNull: false
         },
         notes: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(2000),
             allowNull: true
         },
         owner_id: {
