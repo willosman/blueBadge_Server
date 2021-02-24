@@ -3,7 +3,7 @@ const User = require('../db').import('../models/user');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs');
 
-/*REGISTE A USER */
+/*REGISTER A USER */
 router.post('/register', function(req, res) {
     User.create({email: req.body.user.email, password: bcrypt.hashSync(req.body.user.password, 13), firstName: req.body.user.firstName, zipcode: req.body.user.zipcode})
     .then(function registrationSuccess(user){
