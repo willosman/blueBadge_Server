@@ -32,9 +32,9 @@ router.get('/', validateSession, (req, res) => {
 
 /*GET PLANTS BY ID */
 router.get('/:id', function(req, res) {
-    let owner_id = req.params.id;
+    let id = req.params.id;
     Plants.findAll({
-        where: {owner_id: owner_id}
+        where: {id: id}
     })
     .then(plants => res.status(200).json(plants))
     .catch(err => res.status(500).json({error: err}))
@@ -69,4 +69,3 @@ router.delete('/:id', validateSession, (req, res) => {
 });
 
 module.exports = router
-
