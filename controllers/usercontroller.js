@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../db').import('../models/user');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs');
+const validateSession = require('../middleware/validate-session');
 
 /*REGISTE A USER */
 router.post('/register', function(req, res) {
@@ -16,6 +17,12 @@ router.post('/register', function(req, res) {
         })
     })
     .catch(err => res.status(500).json({error: err}))
+})
+
+router.post('/validate-session', validateSession, function(req, res){
+    if(req.user){
+        res.status(200).json(true)
+    }
 })
 
 /*USER LOGIN */
