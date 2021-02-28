@@ -2,19 +2,19 @@ module.exports = (sequelize, DataTypes) => {
     const Plants = sequelize.define("plants", {
         trefle_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         common_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         scientific_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         image_url: {
             type: DataTypes.STRING(2000),
-            allowNull: false
+            allowNull: true
         },
         notes: {
             type: DataTypes.STRING(2000),
