@@ -1,6 +1,6 @@
 heroku create iplants-server
 
-url for client: https://iplants-server.herokuapp.com/ 
+url for server to use in client: https://iplants-server.herokuapp.com/ 
 
 heroku addons:create heroku-postgresql:hobby-dev --app iplants-server
 
