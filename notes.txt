@@ -1,0 +1,9 @@
+heroku create iplants-server
+
+url for client: https://iplants-server.herokuapp.com/ 
+
+heroku addons:create heroku-postgresql:hobby-dev --app iplants-server
+
+git add . 
+git commit -m "heroku deploy"
+git push heroku main
